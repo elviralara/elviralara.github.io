@@ -4,34 +4,59 @@
     <meta name="theme-color" content="#09f">
     <title>Portfolio de Elvira</title>
     <meta rel="icon" type="image/jpg" href="/elvira.jpg">
-    <style>
-        body {
-            background: rgba(208, 208, 208, 0.9);
-        }
-    </style>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
+    
     <header>
-        <nav>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="mailto:elvira.lara@alu.uclm.es" target="_blank" rel="noreferrer">Email</a>
-        </nav>
+        <dialog id="modal">
+            <h1>Se puede abrir un modal</h1>
+            <p>Es totalmente nativo</p>
+            <button id="cerrar">Cerrar</button>
+        </dialog>
+        
+       
+
+        <script>
+            window.show.addEventListener('click', () => {
+                window.modal.showModal()
+            });
+            window.cerrar.addEventListener('click', () => {
+                window.modal.close()
+            })
+        </script>
+        <div class="flex-space navBar">
+            <nav class="flex-space navBar__nav">
+                <a class="navBar__nav-a" href="#experiencia">Experiencia</a>
+                <a class="navBar__nav-a" href="#proyectos">Proyectos</a>
+                <a class="navBar__nav-a" href="mailto:elvira.lara@alu.uclm.es" target="_blank" rel="noreferrer">Email</a>
+            </nav>
+            <button id="show" class="navBar-button">Ver más información</button> 
+        </div>
+        
     </header>
 
-    <video src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" autoplay muted
-        controls></video>
 
     <main>
-        <h1>Portfolio de Elvira</h1>
-        <p><strong>Ingeniera de Software</strong> con 1 año de experiencia</p>
+        <h1 class="titlex">Portfolio de Elvira</h1>
+        <section class="presentation flex-center">
+            <img class="presentation__image-profile" id="foto-img" title="foto de Elvira" src="elvira.jpg" alt="fotografía de Elvira Lara Alfaro" width="280rem"
+            height="300rem">
+            <p class="presentation__description"><strong>Ingeniera de Software</strong> con 1 año de experiencia</p>
+        </section>
+        <video  width="420px" src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" autoplay muted
+        controls></video>
+
+        
         <h2 id="experiencia">Experiencia</h2>
         <ul>
             <li class="">ESII</li>
         </ul>
-        <img id="foto-img" title="foto de Elvira" src="elvira.jpg" alt="fotografía de Elvira Lara Alfaro" width="200"
-            height="200">
+        
 
         <aside>
             <header>
@@ -46,7 +71,7 @@
 
         <h2 id="proyectos">Proyectos realizados</h2>
         <section>
-            <article>
+            <article class="articulo">
                 <header>
                     <h4>App para transporte público</h4>
                 </header>
@@ -56,9 +81,9 @@
                 </footer>
             </article>
 
-            <article>
+            <article class="articulo">
                 <header>
-                    <h4>Aplicación compra de ropa</h4>
+                    <h4 class="articulo__header-h4">Aplicación compra de ropa</h4>
                 </header>
                 <p>Desarrollo de una aplicación Web para una tienda de ropa</p>
                 <footer>
@@ -134,22 +159,5 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
 
-        <dialog id="modal">
-            <h1>Se puede abrir un modal</h1>
-            <p>Es totalmente nativo</p>
-            <button id="cerrar">Cerrar</button>
-        </dialog>
         
-        <button id="show">Ver más información</button> 
-
-        <script>
-            window.show.addEventListener('click', () => {
-                window.modal.showModal()
-            });
-            window.cerrar.addEventListener('click', () => {
-                window.modal.close()
-            })
-        </script>
-
-
 </body>
