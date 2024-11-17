@@ -1,6 +1,6 @@
 :root{
-    --color-primary: #475b5a;
-    --color-secundary: #b30033;
+    --color-primary: #f8b4c8;
+    --color-secundary: #b4f4e0;
 }
 body{
     max-width: 1440px;
@@ -16,16 +16,18 @@ body{
 }
 
 .articulo:hover{
-    background-color: rgba(186, 183, 183);
+    /*background-color: rgba(186, 183, 183);*/
+    background-color: #e9fff7;
 }
 
 .articulo--active{
-    background-color: rgba(186, 183, 183);
+    /*background-color: rgba(186, 183, 183);*/
+    background-color: #e9fff7;
 }
 
 .articulo__header-h4{
     font-size: 1.5rem;
-    color: #b30033;
+    color: var(--color-primary);;
 }
 
 .flex-space{
@@ -42,7 +44,7 @@ body{
     padding: 1 rem;
 }
 .navBar__nav{
-    background-color: var(--color-secundary);
+    background-color: var(--color-primary);
     width: 28rem;
     padding: 1rem;
 }
@@ -65,7 +67,7 @@ body{
 }
 
 .navBar-button{
-    background-color: var(--color-primary);
+    background-color: var(--color-secundary);
     color: white;
     border-radius: 40px;
     border: transparent;
@@ -80,7 +82,7 @@ body{
     padding: 0.5rem;
 }
 .presentation__description{
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 30rem;
     padding: 0.5rem;
     color: var(--color-primary)
